@@ -8,12 +8,22 @@ type ExpenseProps = {
   onDelete: () => void;
 };
 
-export default function ItemCard() {
+export default function ItemCard({name,amount,category} : ExpenseProps) {
   // หากต้องการเปลี่ยนแปลง type ชนิด string เป็น number สามารถใช้วิธีการดังโค้ดตัวอย่างด้านล่างนี้ได้
-  let val_number: number = Number("500.0");
-  console.log(val_number + 100); // 600.0
-
-  return {
+  // let val_number: number = Number("500.0");
+  // console.log(val_number + 100); // 600.0
+  
+  return (
+    <Card>
+      <Group>
+        <Text>{name}</Text>
+        <Text>{amount}</Text>
+        <Badge>{category}</Badge>
+        <ActionIcon variant="filled" color="red"><IconTrash></IconTrash></ActionIcon>
+    </Group>
+    </Card>
+    
+  );
     /* Type additional text here. */
-  };
+
 }

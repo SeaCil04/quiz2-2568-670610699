@@ -7,6 +7,7 @@ import {
 } from "@mantine/core";
 import { useMediaQuery } from "@mantine/hooks";
 import { IconSun, IconMoon } from "@tabler/icons-react";
+import { IconCoinEuro } from '@tabler/icons-react';
 
 interface HeaderComponentProps {
   opened: boolean;
@@ -41,6 +42,7 @@ export default function HeaderComponent({
         >
           TRACKER-APP
         </Text>
+        <IconCoinEuro stroke={2} />
       </Group>
       <Group gap={5}>
         <ActionIcon
